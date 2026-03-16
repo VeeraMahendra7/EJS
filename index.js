@@ -7,6 +7,8 @@ const port = 8080
 
 app.set("view engine", "ejs")
 
+app.use(express.static("public")) // serving static files
+
 app.get('/', (req, res) => {
     res.render("home.ejs")
 })
